@@ -1,4 +1,4 @@
-iimport java.util.Random;
+import java.util.Random;
 import java.util.Scanner;
 public class Main {
   public static void main(String[] args){
@@ -13,7 +13,7 @@ Random rand = new Random();
 
     int health = 100;
     int attackDamage = 50;
-    int bumHealthPots = 3;
+    int numHealthPotions = 3;
     int healthPotionHealAmount = 30;
     int healthPotionDropChance = 50;
 
@@ -37,17 +37,35 @@ while (enemyHealth > 0) {
   System.out.println("\t3. run");
 
   String input = in.nextLine();
-
-}
-
-
-
-      }
-}}
-
-}
-
-
+if( input.equals("1")){
+    int damageDealt = rand.nextInt ( attackDamage);
+    int damageTaken = rand.nextInt ( enemyAttackDamage);
+    
+    enemyHealth -= damageDealt;
+    health -= damageTaken;
+    
+    System.out.println("\t> You strike the " + enemy + " for " + damageDealt + " damage");
+     System.out.println("\t> YOu take " + damageTaken);
      
-      }
+     if( health < 1 ){
+         System.out.println( "you have died");
+         break;
+     }
 }
+else if ( input.equals("2")){
+    if (numHealthPotions >0){
+        health += healthPotionHealAmount;
+        numHealthPotions--;
+        System.out.println("\t> You drink a health potion" + healthPotionHealAmount);
+        System.out.println("\t You now have " + health +"HP");
+    }
+}
+else if ( input.equals("3")){
+    
+}
+else {
+
+
+
+      }
+}}}}

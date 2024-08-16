@@ -1,11 +1,12 @@
+iimport java.util.Random;
 import java.util.Scanner;
 public class Main {
   public static void main(String[] args){
-    Scanner in = new scanner(System.in);
+    Scanner in = new Scanner(System.in);
 Random rand = new Random();
     //vari
 
-    String[] enemies = {"skeleton", "warriror", "Zombie"};
+    String[] enemies = {"Skeleton", "Warrior", "Zombie"};
     int maxEnemyHealth = 75;
     int enemyAttackDamage = 25;
 
@@ -26,16 +27,23 @@ while (running) {
   int enemyHealth = rand.nextInt(maxEnemyHealth);
 
   String enemy = enemies[rand.nextInt(enemies.length)];
-System.out.println("\t# " + ememy + "appeared #\n");
+System.out.println("\t# " + enemy + " has appeared #\n");
 while (enemyHealth > 0) {
-  System.out.println("/tYour HP: " + health);
-  System.out.println("\t" + enemy +"HP: " +" enemyHealth);
+  System.out.println("\t Your HP: " + health);
+  System.out.println("\t" + enemy +" HP: " + enemyHealth);
   System.out.println("\n\tWhat would you like to do?");
   System.out.println("\t1. Attack");
   System.out.println("\t2. Drink potion");
   System.out.println("\t3. run");
 
   String input = in.nextLine();
+
+}
+
+
+
+      }
+}}
 
 }
 
